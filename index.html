@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Sands & Sons Garage Doors</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> <!-- New Font -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script> <!-- GSAP for animations -->
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="logo.jpeg" alt="Sands and Sons Logo" class="logo">
+            <h1 class="fade-in">Marc Sands & Sons Garage Doors</h1>
+            <p class="tagline fade-in">Residential and Commercial Installation and Repair</p>
+            <!-- Updated button to "Get a Quote" -->
+            <a href="mailto:marcsandsgaragedoors@gmail.com?subject=Get a Quote" class="scroll-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Our Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="parallax">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>Marc Sands and Sons LLC is an Overhead Garage door installation company based in Bucks County, PA. We specialize in both residential and commercial garage door services, offering top-quality installations and repairs with a commitment to excellence.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Our Work</h2>
+        <div class="masonry-grid">
+            <div class="card">
+                <a href="https://www.facebook.com/media/set/?vanity=102979205199602&set=a.103014548529401">
+                    <img src="residential2.jpg" alt="Residential Garage Door Installation">
+                    <h3>Residential Installation</h3>
+                </a>
+                <p>High-quality installations for your home, tailored to your style and budget.</p>
+            </div>
+            <div class="card">
+                <a href="https://www.facebook.com/media/set/?vanity=102979205199602&set=a.103016785195844">
+                    <img src="commercial.jpg" alt="Commercial Garage Door Installation">
+                    <h3>Commercial Installation</h3>
+                </a>
+                <p>Reliable and durable garage door solutions for businesses of all sizes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries, please email us at: <a href="mailto:marcsandsgaragedoors@gmail.com">marcsandsgaragedoors@gmail.com</a></p>
+        <p>Phone: <a href="tel:+2152212099">+1 (215) 221-2099</a></p>
+        <p>Follow us on Facebook: <a href="https://www.facebook.com/MarcSandsAndSonsGarageDoors" target="_blank">Marc Sands & Sons Garage Doors</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Marc Sands & Sons Garage Doors. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // GSAP for fade-in animation
+        gsap.from(".fade-in", { opacity: 0, duration: 1, y: 50, stagger: 0.3 });
+    </script>
+</body>
+</html>
