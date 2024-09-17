@@ -81,14 +81,16 @@ nav {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;  /* Ensures the centering works */
+    justify-content: center;  /* Centers the navigation items */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 2rem;
     margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
@@ -190,6 +192,29 @@ footer {
     padding: 1rem;
     text-align: center;
     color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Hero Section */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    /* Adjust navigation for mobile */
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Parallax Section */
+    .parallax {
+        background-attachment: scroll; /* Disable fixed background on mobile for better performance */
+    }
 }
 
 /* Smooth Scroll */
