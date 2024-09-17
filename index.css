@@ -1,4 +1,10 @@
-/* General Styles */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -7,6 +13,40 @@ body {
     color: #f5f5f5;
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #444;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centers the navigation links */
+    gap: 2rem; /* Creates space between the links */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #e53935;
 }
 
 /* Hero Section with Overlay */
@@ -72,38 +112,9 @@ header .scroll-button:hover {
     color: white;
 }
 
-/* Navigation */
-nav {
-    background-color: #444;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #e53935;
-}
-
-/* Parallax Effect */
+/* Parallax Section */
 .parallax {
-    background-image: url('residential.jpg');
+    background-image: url('residential.jpg'); /* Ensure the image URL is correct */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -120,6 +131,20 @@ nav ul li a:hover {
     border-radius: 8px;
 }
 
+/* About Us Section */
+#about {
+    padding: 2rem;
+    background-color: #2c2c2c; /* Same color as Contact Us */
+    text-align: center;
+}
+
+/* Our Work Section */
+#gallery {
+    padding: 2rem;
+    background-color: #2c2c2c; /* Same color as Contact Us */
+    text-align: center;
+}
+
 /* Section Headings */
 h2 {
     color: #e53935;
@@ -133,7 +158,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin: 2rem;
-    text-align: center; /* Centering text inside each card */
+    text-align: center;
 }
 
 .card {
@@ -155,12 +180,10 @@ h2 {
     padding: 1rem;
     background-color: #444;
     color: white;
-    text-align: center; /* Center text within the card */
 }
 
 .card p {
     padding: 0 1rem 1rem 1rem;
-    text-align: center; /* Center text within the card */
     color: #f5f5f5;
 }
 
@@ -192,66 +215,25 @@ footer {
     color: #ffffff;
 }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobile Responsive Styles */
-@media only screen and (max-width: 768px) {
-    
-    /* Hero Section */
-    header .hero {
-        height: 60vh; /* Adjust the hero section height for mobile */
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hides the navigation bar on smaller devices */
     }
-    
+
     header h1 {
-        font-size: 2rem; /* Reduce the font size for mobile */
+        font-size: 2.5rem;
     }
 
     header .tagline {
-        font-size: 1rem; /* Adjust tagline size */
+        font-size: 1rem;
     }
 
     header .scroll-button {
-        padding: 0.75rem 1.5rem; /* Make button smaller */
-        font-size: 0.9rem;
-    }
-    
-    /* Navigation */
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        gap: 1rem; /* Reduce gap between navigation items */
+        padding: 0.8rem 1.6rem;
     }
 
-    /* Gallery Grid */
-    .masonry-grid {
-        grid-template-columns: 1fr; /* Single column for mobile */
-        gap: 1rem;
-    }
-
-    /* Gallery Images */
-    .card img {
-        height: auto; /* Adjust image size */
-    }
-
-    /* Contact Section */
-    #contact {
-        padding: 1rem; /* Adjust padding */
-    }
-}
-
-/* For very small mobile devices (like smartphones) */
-@media only screen and (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem; /* Further reduce heading size */
-    }
-
-    header .tagline {
-        font-size: 0.9rem; /* Adjust tagline size */
-    }
-    
-    nav ul {
-        gap: 0.5rem; /* Smaller gap between nav items */
+    .parallax {
+        background-attachment: scroll; /* Disable fixed background on mobile for better performance */
     }
 }
