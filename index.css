@@ -196,3 +196,62 @@ footer {
 html {
     scroll-behavior: smooth;
 }
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+    
+    /* Hero Section */
+    header .hero {
+        height: 60vh; /* Adjust the hero section height for mobile */
+    }
+    
+    header h1 {
+        font-size: 2rem; /* Reduce the font size for mobile */
+    }
+
+    header .tagline {
+        font-size: 1rem; /* Adjust tagline size */
+    }
+
+    header .scroll-button {
+        padding: 0.75rem 1.5rem; /* Make button smaller */
+        font-size: 0.9rem;
+    }
+    
+    /* Navigation */
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 1rem; /* Reduce gap between navigation items */
+    }
+
+    /* Gallery Grid */
+    .masonry-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 1rem;
+    }
+
+    /* Gallery Images */
+    .card img {
+        height: auto; /* Adjust image size */
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 1rem; /* Adjust padding */
+    }
+}
+
+/* For very small mobile devices (like smartphones) */
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Further reduce heading size */
+    }
+
+    header .tagline {
+        font-size: 0.9rem; /* Adjust tagline size */
+    }
+    
+    nav ul {
+        gap: 0.5rem; /* Smaller gap between nav items */
+    }
+}
